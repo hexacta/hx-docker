@@ -1,2 +1,4 @@
-# hx-docker
-Capacitación Hexacta - Docker containers
+# Capacitación Hexacta - Containers
+
+![Docker](http://i.imgur.com/l5jHUaV.png)
+

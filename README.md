@@ -11,10 +11,10 @@
 
 ## Links
 
-[Docker for Windows](https://www.docker.com/docker-windows)
-[Docker for Mac](https://www.docker.com/docker-mac)
-[Docker for Ubuntu](https://www.docker.com/docker-ubuntu)
-[Documentation](https://docs.docker.com/)
+* [Docker for Windows](https://www.docker.com/docker-windows)
+* [Docker for Mac](https://www.docker.com/docker-mac)
+* [Docker for Ubuntu](https://www.docker.com/docker-ubuntu)
+* [Documentation](https://docs.docker.com/)
 
 ## Commands
 

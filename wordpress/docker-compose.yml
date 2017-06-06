@@ -12,7 +12,8 @@ services:
   wordpress_db:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: back2skl
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: asdf1234
     ports:
       - 3306:3306
     networks:

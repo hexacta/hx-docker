@@ -43,42 +43,19 @@ $ tar -c container.tar # docker import - container:version # import container
 $ run --name webapp -p 8080:80 -d container:version /usr/bin/supervisord # run imported image
 ```
 
-## Projects commands
-
-### Ubuntu base
-
-```
-$ docker run -it --name ubuntu ubuntu:latest
-$ docker start ubuntu
-$ docker exec -it ubuntu /bin/bash
-$ docker stop ubuntu
-$ docker rm ubuntu
-```
-
-### Nginx
-
-```
-$ docker build -t static-nginx:0.1.0 .
-$ docker run --name static-nginx-v1 -p 8080:80 static-nginx:0.1.0
-
-$ docker build -t static-nginx:0.1.1 .
-$ docker run --name static-nginx-v2 -p 8080:80 static-nginx:0.1.1
-
-$ docker run --name static-nginx-v3 -p 8080:80 -v ./src:/usr/share/nginx/html static-nginx:0.1.1
-
-```
-
-### Wordpress
-
-```
-$ docker-compose -f docker-compose.yml up --build
-$ docker images
-$ docker compose up
-```
-
-### Docker
+### Docker buscar y eliminar containers e imágenes
 
 ```
 $ docker ps -a | grep -v COMMAND | awk '{ print $1 }' | xargs docker rm
 $ docker images | grep -v REPOSITORY | awk '{ print $3 }' | xargs docker image rm
+```
+
+## Probado Ubuntu
+
+```
+$ docker run -it --name ubuntu ubuntu:latest /bin/bash
+$ docker start ubuntu
+$ docker exec -it ubuntu /bin/bash
+$ docker stop ubuntu
+$ docker rm ubuntu
 ```

@@ -1,22 +1,24 @@
-# Capacitación Hexacta - Containers
+![Hexacta](http://i.imgur.com/LwGwCTZ.jpg)
+
+# Hexacta OpenTalk - DevOps: Containers
 
 ![Docker](http://i.imgur.com/l5jHUaV.png)
 
-## Contents
+## Contenidos
 
-* Nginx
-* Flask for developers
-* Microservices
-* Wordpress
+* Website estático con Nginx
+* Flask para developers
+* Microservicios
+* Wordpress con MariaDB
 
 ## Links
 
-* [Docker for Windows](https://www.docker.com/docker-windows)
-* [Docker for Mac](https://www.docker.com/docker-mac)
-* [Docker for Ubuntu](https://www.docker.com/docker-ubuntu)
-* [Documentation](https://docs.docker.com/)
+* [Docker para Windows](https://www.docker.com/docker-windows)
+* [Docker para Mac](https://www.docker.com/docker-mac)
+* [Docker para Ubuntu](https://www.docker.com/docker-ubuntu)
+* [Documentación](https://docs.docker.com/)
 
-## Docker Commands
+## Comandos básicos
 
 ```
 $ docker --version # Version
@@ -31,6 +33,11 @@ $ docker run --name webapp01 -p 8080:80 <name|id> # forward ports local:docker
 $ docker run --name webapp01 -p 8080:80 -d <name|id> # as daemon
 $ docker build -t webapp01 . # build
 $ docker exec -ti webapp01 /bin/bash # enter in interactive mode
+```
+
+## Exportar container
+
+```
 $ docker export container > container.tar # export container
 $ tar -c container.tar # docker import - container:version # import container
 $ run --name webapp -p 8080:80 -d container:version /usr/bin/supervisord # run imported image
@@ -72,6 +79,6 @@ $ docker compose up
 ### Docker
 
 ```
-$ docker ps -a | grep -v COMMAND | awk '{ print $1 }' | xargs docker rm 
+$ docker ps -a | grep -v COMMAND | awk '{ print $1 }' | xargs docker rm
 $ docker images | grep -v REPOSITORY | awk '{ print $3 }' | xargs docker image rm
 ```

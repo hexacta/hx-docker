@@ -35,7 +35,7 @@ $ docker build -t webapp01 . # build
 $ docker exec -ti webapp01 /bin/bash # enter in interactive mode
 ```
 
-## Exportar container
+### Exportar container
 
 ```
 $ docker export container > container.tar # export container
@@ -50,7 +50,7 @@ $ docker ps -a | grep -v COMMAND | awk '{ print $1 }' | xargs docker rm
 $ docker images | grep -v REPOSITORY | awk '{ print $3 }' | xargs docker image rm
 ```
 
-## Probado Ubuntu
+### Probado Ubuntu
 
 ```
 $ docker run -it --name ubuntu ubuntu:latest /bin/bash

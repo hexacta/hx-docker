@@ -10,7 +10,7 @@ RUN apt-get install -y nginx
 RUN apt-get install -y supervisor
 
 # Copy files
-COPY nginx/nginx.conf /etc/nginx/sites-available/
+COPY nginx/flask.conf /etc/nginx/sites-available/
 COPY supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY app /var/www
 

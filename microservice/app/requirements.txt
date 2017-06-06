@@ -1,2 +1,2 @@
-uwsgi
-flask
+uwsgi==2.0
+flask==0.12
